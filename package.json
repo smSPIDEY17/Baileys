@@ -1,6 +1,6 @@
 {
-  "name": "baileys-pro",
-  "version": "0.0.5",
+  "name": "baileys",
+  "version": "0.0.8",
   "description": "WhatsApp API",
   "keywords": [
     "whatsapp",
@@ -12,12 +12,12 @@
     "automation",
     "multi-device"
   ],
-  "homepage": "https://github.com/FizzxyTheGreat/baileyss",
+  "homepage": "https://github.com/CentreTheEnd/Baileys",
   "repository": {
-    "url": "git@github.com:zervidas/baileys-pro.git"
+    "url": "git@github.com:CentreTheEnd/Baileys.git"
   },
   "license": "MIT",
-  "author": "Adhiraj Singh",
+  "author": "CentreTheEnd",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
