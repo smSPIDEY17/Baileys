@@ -22,7 +22,7 @@
 ```json
 {
   "dependencies": {
-    "@ArabDevs/Baileys": "github:ArabsDev/Baileys"
+    "@whiskeysockets/Baileys": "github:CentreTheEnd/Baileys"
   }
 }
 ```
@@ -38,13 +38,13 @@ Here is an example you can use: [example.ts](Example/example.ts) or here is a tu
 
 Use the stable version:
 ```bash
-npm install @ArabDevs/Baileys@github:ArabsDev/Baileys
+npm install @whiskeysockets/Baileys@github:CentreTheEnd/Baileys
 ```
 
 
 Then import your code using:
 ```javascript
-const { default: makeWASocket } = require("@ArabDevs/Baileys")
+const { default: makeWASocket } = require("@whiskeysockets/Baileys")
 ```
 ## Connecting Account
 
@@ -56,7 +56,7 @@ WhatsApp provides a multi-device API that allows Baileys to be authenticated as 
 > You can customize browser name if you connect with **QR-CODE**, with `Browser` constant, we have some browsers config, **see [here](https://baileys.whiskeysockets.io/types/BrowsersMap.html)**
 
 ```javascript
-const { default: makeWASocket } = require("@ArabDevs/Baileys")
+const { default: makeWASocket } = require("@whiskeysockets/Baileys")
 
 
 const sock = makeWASocket({
@@ -77,7 +77,7 @@ If the connection is successful, you will see a QR code printed on your terminal
 The phone number can't have `+` or `()` or `-`, only numbers, you must provide country code
 
 ```javascript
-const { default: makeWASocket } = require("@ArabDevs/Baileys")
+const { default: makeWASocket } = require("@whiskeysockets/Baileys")
 
 const sock = makeWASocket({
     // can provide additional config here
@@ -159,7 +159,7 @@ You obviously don't want to keep scanning the QR code every time you want to con
 
 So, you can load the credentials to log back in:
 ```javascript
-const makeWASocket = require("@ArabDevs/Baileys").default;
+const makeWASocket = require("@whiskeysockets/Baileys").default;
 const { useMultiFileAuthState } = require("@ArabDevs/Baileys");
 
 const { state, saveCreds } = await useMultiFileAuthState('auth_info_baileys')
@@ -200,7 +200,7 @@ sock.ev.on('messages.upsert', ({ messages }) => {
 > This example includes basic auth storage too
 
 ```javascript
-const makeWASocket = require("@ArabDevs/Baileys").default;
+const makeWASocket = require("@whiskeysockets/Baileys").default;
 const { DisconnectReason, useMultiFileAuthState } = require("@ArabDevs/Baileys");
 const Boom = require('@hapi/boom');
 
