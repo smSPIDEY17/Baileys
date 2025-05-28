@@ -1,7 +1,7 @@
 syntax = "proto2";
 package proto;
 
-message ADVDeviceIdentity {
+message SMDeviceIdentity {
     optional uint32 rawId = 1;
     optional uint64 timestamp = 2;
     optional uint32 keyIndex = 3;
@@ -9,32 +9,32 @@ message ADVDeviceIdentity {
     optional ADVEncryptionType deviceType = 5;
 }
 
-enum ADVEncryptionType {
+enum SMVEncryptionType {
     E2EE = 0;
     HOSTED = 1;
 }
-message ADVKeyIndexList {
+message SMVKeyIndexList {
     optional uint32 rawId = 1;
     optional uint64 timestamp = 2;
     optional uint32 currentIndex = 3;
     repeated uint32 validIndexes = 4 [packed=true];
-    optional ADVEncryptionType accountType = 5;
+    optional SMVEncryptionType accountType = 5;
 }
 
-message ADVSignedDeviceIdentity {
+message SMVSignedDeviceIdentity {
     optional bytes details = 1;
     optional bytes accountSignatureKey = 2;
     optional bytes accountSignature = 3;
     optional bytes deviceSignature = 4;
 }
 
-message ADVSignedDeviceIdentityHMAC {
+message SMVSignedDeviceIdentityHMAC {
     optional bytes details = 1;
     optional bytes hmac = 2;
-    optional ADVEncryptionType accountType = 3;
+    optional SMVEncryptionType accountType = 3;
 }
 
-message ADVSignedKeyIndexList {
+message SMVSignedKeyIndexList {
     optional bytes details = 1;
     optional bytes accountSignature = 2;
     optional bytes accountSignatureKey = 3;
@@ -608,8 +608,8 @@ message DeviceListMetadata {
     optional bytes senderKeyHash = 1;
     optional uint64 senderTimestamp = 2;
     repeated uint32 senderKeyIndexes = 3 [packed=true];
-    optional ADVEncryptionType senderAccountType = 4;
-    optional ADVEncryptionType receiverAccountType = 5;
+    optional SMVEncryptionType senderAccountType = 4;
+    optional SMVEncryptionType receiverAccountType = 5;
     optional bytes recipientKeyHash = 8;
     optional uint64 recipientTimestamp = 9;
     repeated uint32 recipientKeyIndexes = 10 [packed=true];
